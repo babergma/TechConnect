@@ -26,7 +26,7 @@ git config --global diff.tool code
 git config --global difftool.code.cmd "code -w -d \$LOCAL \$REMOTE"
 
 echo
-echo "Configuring Upstream For blue-java-main..."
+echo "Configuring Upstream - blue-java-main..."
 
 git remote add upstream "https://bitbucket.org/te-jpmc-tech-connect-us-jun2021/blue-java-main"
 git config branch.master.mergeOptions "--no-edit"
