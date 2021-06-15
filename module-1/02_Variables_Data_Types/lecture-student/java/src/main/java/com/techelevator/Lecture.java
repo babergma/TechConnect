@@ -1,29 +1,29 @@
 package com.techelevator;
 
 public class Lecture {
-
+// method definition
 	public static void main(String[] args) {
 		
 		/*
 		1. Create a variable to hold an int and call it numberOfExercises.
 			Then set it to 26.
 		*/
-
-		//System.out.println(numberOfExercises);
+		int numberOfExercises= 26;
+		System.out.println(numberOfExercises);
 
 		/*
 		2. Create a variable to hold a double and call it half.
 			Set it to 0.5.
 		*/
-
-		//System.out.println(half);
+		double half = 0.5;
+		System.out.println(half);
 
 		/*
 		3. Create a variable to hold a String and call it name.
 			Set it to "TechElevator".
 		*/
-
-		//System.out.println(name);
+		String name = "TechElevator";
+		System.out.println(name + " length is " + name.length());
 
 		/*
 		4. Create a variable called seasonsOfFirefly and set it to 1.
@@ -113,7 +113,8 @@ public class Lecture {
 		/*
 		23. If I divide 5 by 2, what's my remainder?
 		*/
-
+double remainder = (5%2);
+System.out.println(remainder);
 		/*
 		24. What is 1,000,000,000 * 3?
 		*/
