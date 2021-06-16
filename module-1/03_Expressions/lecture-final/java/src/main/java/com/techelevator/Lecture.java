@@ -7,6 +7,7 @@ public class Lecture {
 	 */
 	public int returnNotOne() {
 		return 2;
+
 	}
 
 	/*
@@ -14,6 +15,7 @@ public class Lecture {
 	 * that it returns something other than a 0.5.
 	 */
 	public double returnNotHalf() {
+
 		return 1.5;
 	}
 
