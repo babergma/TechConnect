@@ -17,11 +17,17 @@ public class DecimalToBinary {
 		Scanner scanner = new Scanner(System.in); //initializes our object - constructor
 		System.out.println("Change a decimal to binary!");
 
-		System.out.println("Please enter in a series of decimal values (separated by spaces): ");
-		String input = scanner.nextLine();
+		System.out.print("Please provide a series of numbers (space separated): ");
+		String numbers = scanner.nextLine();
+		String[] numbersArray = numbers.split(" ");
 
-		String[] seriesArray = input
-//		double dec = Double.parseDouble(input);
+
+		// For each String in the array convert to number
+		for(int i = 0; i < numbersArray.length; i++){
+			int stringToNumber = Integer.parseInt(numbersArray[i]);
+			String binaryNumber =	Integer.toBinaryString(stringToNumber);
+			System.out.println(numbersArray[i] + " in binary is " + binaryNumber);
+		}
 
 
 	}
