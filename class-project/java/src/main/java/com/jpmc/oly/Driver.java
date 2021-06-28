@@ -30,6 +30,8 @@ public class Driver {
          * change the way we work with our resource layer (go from
          * File System to Database) without having to change our client
          * layer (we still have work to do to achieve this piece).
+         *
+         * Change...
          */
         Scanner scanner = new Scanner(System.in);
 
