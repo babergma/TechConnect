@@ -1,5 +1,7 @@
 package com.jpmc.oly.model;
 
+import java.util.Objects;
+
 /**
  * Stores and carries information about a Country
  *
@@ -45,6 +47,19 @@ public class Country {
 
     public void setCapital(String capital) {
         this.capital = capital;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Country country = (Country) o;
+        return Objects.equals(countryName, country.countryName) && Objects.equals(capital, country.capital);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(countryName, capital);
     }
 
     @Override
