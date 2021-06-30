@@ -1,6 +1,8 @@
 package com.jpmc.oly;
 
 import com.jpmc.oly.client.CountryConsole;
+import com.jpmc.oly.dao.CountryDao;
+import com.jpmc.oly.dao.CountryDaoDb;
 import com.jpmc.oly.dao.CountryDaoFile;
 import com.jpmc.oly.model.Country;
 import com.jpmc.oly.model.Person;
@@ -14,10 +16,10 @@ public class Driver {
     public static void main(String[] args){
         System.out.println("Hello From Our Olympic Stats App!");
 
-        Sport basketball = new Sport("Basketball");
-        Player player1 = new Player("Joesph", 99, basketball);
-
-        System.out.println(player1);
+//        Sport basketball = new Sport("Basketball");
+//        Player player1 = new Player("Joesph", 99, basketball);
+//
+//        System.out.println(player1);
 
         /*
          * Wire together our application
@@ -40,20 +42,22 @@ public class Driver {
          * layer (we still have work to do to achieve this piece).
          *
          */
-//        Scanner scanner = new Scanner(System.in);
-//
-//        CountryDaoFile countryDao = new CountryDaoFile();
-//
-//        CountryConsole countryConsole = new CountryConsole(scanner, countryDao);
-//
-//        while (true) {
-//            Country currentCountry = countryConsole.getCountry();
-//            if (currentCountry == null){
-//                System.exit(0);
-//            }
-//            System.out.println("Current country is " + currentCountry.getCountryName() +
-//                    " Capital is " + currentCountry.getCapital());
-//        }
+        Scanner scanner = new Scanner(System.in);
+
+
+        CountryDao countryDao = new CountryDaoFile(); // or new CountryDaoDb for database access
+                                                      // only 1 place in our application we need to change
+
+        CountryConsole countryConsole = new CountryConsole(scanner, countryDao);
+
+        while (true) {
+            Country currentCountry = countryConsole.getCountry();
+            if (currentCountry == null){
+                System.exit(0);
+            }
+            System.out.println("Current country is " + currentCountry.getCountryName() +
+                    " Capital is " + currentCountry.getCapital());
+        }
 
     }
 }

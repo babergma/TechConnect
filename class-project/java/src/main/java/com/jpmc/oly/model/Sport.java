@@ -46,7 +46,7 @@ public class Sport {
     @Override
     public int hashCode() {
         return Objects.hash(name, worldRecord);
-    }
+    } // creates an int based on some calculation - we want unique values for objects with different state
 
     @Override
     public String toString() {

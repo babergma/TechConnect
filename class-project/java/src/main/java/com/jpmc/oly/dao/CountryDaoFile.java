@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CountryDaoFile {
+public class CountryDaoFile implements CountryDao {
     /**
      * Key - countryName
      */
@@ -20,6 +20,7 @@ public class CountryDaoFile {
      * Inserts or updates country in the resources layer
      * @param country
      */
+    @Override
     public void saveCountry(Country country){
         // update countryMap if key already there or insert if key is not there
         countryMap.put(country.getCountryName(), country);
@@ -31,6 +32,7 @@ public class CountryDaoFile {
      * @param countryName
      * @return Country if matched or null if not found
      */
+    @Override
     public Country getCountry(String countryName){
         return countryMap.get(countryName);
     }
@@ -39,6 +41,7 @@ public class CountryDaoFile {
      *
      * @return the Collection of all countries in our map
      */
+    @Override
     public Country[] getCountries() {
         return countryMap.values().toArray(new Country[countryMap.size()]);
     }
@@ -46,6 +49,7 @@ public class CountryDaoFile {
     /**
      * Loads the countries from the resource layer into our map
      */
+    @Override
     public void loadCountries(){
         // create our Map of Country from the File System
         countryMap = new HashMap<>();
@@ -62,6 +66,7 @@ public class CountryDaoFile {
     /**
      * Write the countries into our resource layer from our map
      */
+    @Override
     public void writeCountries(){
         // write our Map of Country to the File System
     }

@@ -1,6 +1,6 @@
 package com.jpmc.oly.client;
 
-import com.jpmc.oly.dao.CountryDaoFile;
+import com.jpmc.oly.dao.CountryDao;
 import com.jpmc.oly.model.Country;
 
 import java.util.Collection;
@@ -19,10 +19,19 @@ public class CountryConsole {
 
     /**
      * Need our Country Dao to get and save countries (dependency)
+     *
+     * Define Country Dao dependency as an interface to achieve loose coupling
+     * Loose coupling means that CountryConsole can use any class that implements
+     * the CountryDao interface and adds code to all the interface methods.
+     *
+     * In our discussion, we had 2 classes CountryDaoFile and CountryDaoDb that
+     * implemented the CountryDao interface so either one can be passed into the
+     * constructor to fulfill the dependency. (See Driver.java for where we choose
+     * which concrete class to use).
      */
-    private CountryDaoFile countryDao;
+    private CountryDao countryDao;
 
-    public CountryConsole(Scanner scanner, CountryDaoFile countryDao){
+    public CountryConsole(Scanner scanner, CountryDao countryDao){
         this.scanner = scanner;
         this.countryDao = countryDao;
     }
