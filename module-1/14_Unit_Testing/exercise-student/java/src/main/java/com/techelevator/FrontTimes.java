@@ -9,6 +9,7 @@ public class FrontTimes {
 	 * "ChoCho" frontTimes("Chocolate", 3) → "ChoChoCho" frontTimes("Abc", 3) →
 	 * "AbcAbcAbc"
 	 */
+
 	public String generateString(String str, int n) {
 		String result = "";
 		if (str != null) {
@@ -24,5 +25,22 @@ public class FrontTimes {
 		}
 		return result;
 	}
+
+//	public String generateString(String str, int n) {
+//		String result = "";
+//		if (str != null) {
+//			if (str.length() <= 3) {
+//				for (int i = 0; i < n; i++) {
+//					result += str;
+//				}
+//			} else {
+//				for (int i = 0; i < n; i++) {
+//					result += str.substring(0, 3);
+//				}
+//			}
+//		}
+//		return result;
+//	}
+
 
 }

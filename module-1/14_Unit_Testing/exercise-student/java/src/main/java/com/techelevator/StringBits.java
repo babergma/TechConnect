@@ -7,6 +7,7 @@ public class StringBits {
 	 * the first, so "Hello" yields "Hlo". GetBits("Hello") → "Hlo" GetBits("Hi")
 	 * → "H" GetBits("Heeololeo") → "Hello"
 	 */
+
 	public String getBits(String str) {
 		String result = "";
 		if (str != null) {
