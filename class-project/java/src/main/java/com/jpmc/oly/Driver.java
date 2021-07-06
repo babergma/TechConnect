@@ -4,6 +4,7 @@ import com.jpmc.oly.client.CountryConsole;
 import com.jpmc.oly.dao.CountryDao;
 import com.jpmc.oly.dao.CountryDaoDb;
 import com.jpmc.oly.dao.CountryDaoFile;
+import com.jpmc.oly.exception.CountryLoadException;
 import com.jpmc.oly.model.Country;
 import com.jpmc.oly.model.Person;
 import com.jpmc.oly.model.Player;
@@ -45,7 +46,15 @@ public class Driver {
         Scanner scanner = new Scanner(System.in);
 
 
-        CountryDao countryDao = new CountryDaoFile(); // or new CountryDaoDb for database access
+        CountryDao countryDao = null;
+//        try {
+//            countryDao = new CountryDaoFile(); // or new CountryDaoDb for database access
+//        } catch (CountryLoadException ex){
+//            // Log the exception
+//            // Give generic information back to user (security)
+//            System.out.println("Problem starting application... please contact your administrator");
+//        }
+        countryDao = new CountryDaoFile();
                                                       // only 1 place in our application we need to change
 
         CountryConsole countryConsole = new CountryConsole(scanner, countryDao);
