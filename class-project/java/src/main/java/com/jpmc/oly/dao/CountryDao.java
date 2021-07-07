@@ -1,5 +1,6 @@
 package com.jpmc.oly.dao;
 
+import com.jpmc.oly.exception.CountryLoadException;
 import com.jpmc.oly.model.Country;
 
 import java.util.HashMap;
@@ -25,7 +26,7 @@ public interface CountryDao {
     /**
      * Loads the countries from the resource layer into our map
      */
-    void loadCountries();
+    void loadCountries() throws CountryLoadException;
 
     /**
      * Write the countries into our resource layer from our map

@@ -25,7 +25,7 @@ public class Country {
     }
 
     public Country(String countryName, String capital) {
-        this.countryName = countryName;
+        setCountryName(countryName);
         this.capital = capital;
     }
 
@@ -38,7 +38,7 @@ public class Country {
     }
 
     public void setCountryName(String countryName) {
-        this.countryName = countryName;
+        this.countryName = countryName.trim();
     }
 
     public String getCapital() {
