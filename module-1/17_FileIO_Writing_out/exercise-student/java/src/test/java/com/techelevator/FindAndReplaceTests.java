@@ -61,6 +61,7 @@ public class FindAndReplaceTests {
 
         // call main()
         invoke(searchStr);
+        invoke(searchStr);
 
         // read destination file
         String destContent = new String(Files.readAllBytes(destFile.toPath()));
