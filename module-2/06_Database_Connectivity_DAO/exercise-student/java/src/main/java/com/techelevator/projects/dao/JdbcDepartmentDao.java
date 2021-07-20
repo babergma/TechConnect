@@ -52,7 +52,7 @@ public class JdbcDepartmentDao implements DepartmentDao {
 		List<Department> allDepartments = new ArrayList<>();
 
 		String sql = "SELECT * " +
-				"FROM department ";
+				"FROM department;";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 
 		while (results.next()) {
