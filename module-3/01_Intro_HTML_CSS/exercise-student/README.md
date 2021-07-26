@@ -41,6 +41,7 @@ These requirements apply to both parts of the exercise:
   - A list of 2-3 links.
     - Examples include IMDb pages, Wikipedia pages, or official band or team sites.
   - Section headings for table, quotes, and link sections.
+  
 - Style content using CSS:
   - Set a font for the page or certain elements.
   - Use a different background color for the page.

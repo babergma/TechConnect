@@ -212,6 +212,17 @@ public class EmployeeProjectsCLI {
 		listProjects(projects);
 	}
 
+	private void listProjects(List<Project> projects) {
+		System.out.println();
+		if(projects.size() > 0) {
+			for(Project proj : projects) {
+				System.out.println(proj);
+			}
+		} else {
+			System.out.println("\n*** No results ***");
+		}
+	}
+
 	private void handleAddProject() {
 		printHeading("Add New Project");
 		String newProjectName = getUserInput("Enter new Project name");
@@ -273,17 +284,7 @@ public class EmployeeProjectsCLI {
 		List<Project> allProjects = projectDao.getAllProjects();
 		return (Project)menu.getChoiceFromOptions(allProjects.toArray());
 	}
-	
-	private void listProjects(List<Project> projects) {
-		System.out.println();
-		if(projects.size() > 0) {
-			for(Project proj : projects) {
-				System.out.println(proj);
-			}
-		} else {
-			System.out.println("\n*** No results ***");
-		}
-	}
+
 
 	private void printHeading(String headingText) {
 		System.out.println("\n"+headingText);

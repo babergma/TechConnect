@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Fan Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title">
+        <header>    
+            <h1>Friends Fan Page</h1>
+        </header>
+        <image class="img" src="/img/friends.jpg" alt="friends"> </image>
+    </div>
+    <div>
+        <h2>Character Info</h2>
+        <table>
+            <tr>
+              <th>Character</th>
+              <th>Real Name</th>
+            </tr>
+            <tr>
+              <td>Rachel Green</td>
+              <td>Jennifer Aniston</td>
+            </tr>
+            <tr>
+                <td>Monica Geller</td>
+                <td>Courteney Cox</td>
+              </tr>
+              <tr>
+                <td>Chandler Bing </td>
+                <td>Matthew Perry</td>
+              </tr>
+              <tr>
+                <td>Ross Geller</td>
+                <td>David Schwimmer</td>
+              </tr>
+              <tr>
+                <td>Joey Tribbiani</td>
+                <td>Matt LeBlanc</td>
+              </tr>
+              <tr>
+                <td>Phoebe Buffay</td>
+                <td>Lisa Kudrow</td>
+              </tr>
+          </table>
+          
+    </div>
+    <div>
+        <h2>Quotes</h2>
+        <blockquote>
+            How you doin’?
+        </blockquote>
+        <blockquote>
+            I’m not great at the advice. Can I interest you in a sarcastic comment?
+        </blockquote>
+    </div>
+    <div>
+        <nav>
+            <h2 id='link'>Links</h1>
+                <a href="https://en.wikipedia.org/wiki/Friends">Friends Wiki Page</a>
+                <a href="https://www.imdb.com/title/tt0108778/">Friends ImDb Page</a>
+        </nav>
+       
+    </div>
+
+    <div>
+        <h1>Registration Form</h1>
+        <form action="http://localhost:3000/api/users/login" method="POST" onsubmit="Submitted info">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" required/>
+          
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" required/>
+
+            <label for="dob">Date of birth:</label>
+            <input id="dob" name="dob" type="date" />
+
+            <label for="color">Favorite Color:</label>
+            <input id="color" name="color" type="text" />
+
+            <label for="num">Favorite Number:</label>
+            <input id="num" name="num" type="text" />
+            <input type="submit">
+          </form>
+    </div>
+    
+</body>
+</html>

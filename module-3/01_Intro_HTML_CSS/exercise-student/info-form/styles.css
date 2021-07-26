@@ -1,0 +1,29 @@
+body{
+    background-color: antiquewhite;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 10%;
+}
+.title{
+color: cadetblue;
+text-align: center;
+}
+
+.img{
+    width: 500px;
+    text-align: center;
+    opacity: 0.8;
+}
+blockquote{
+    font-style: italic;
+    font-size: 18px;
+}
+h2{
+    text-decoration: underline;
+}
+
+form{
+    line-height: 52px;
+    font-size: 20px;
+    margin: 2%;
+    background-color: darkcyan;
+}
