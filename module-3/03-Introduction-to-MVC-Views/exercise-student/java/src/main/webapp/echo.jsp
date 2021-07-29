@@ -40,5 +40,28 @@
 <%--
 	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
  --%>
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		li {
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+
+<ul id="echo">
+
+	<c:set var = "word" value = "${param.word}" />
+	<c:set var = "count" value =  "${param.count}"/>
+	<c:forEach begin="1" end="${param.count}" var="counter">
+		<li style="font-size:${param.count - counter+1}px"><c:out value="${param.word}"/></li>
+
+	</c:forEach>
+</ul>
+
+</body>
+</html>
 
 <c:import url="common/footer.jsp"></c:import>

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class NameServlet extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		List<String> names = new ArrayList<String>();
 		names.add("André");
@@ -25,10 +25,18 @@ public class NameServlet extends HttpServlet {
 
 		/* This line adds a request attribute with the name "studentList"
 		 * that contains our list of student names. This will later be
-		 * used by the View (i.e. JSP) to display student names in HTML */
-		req.setAttribute("nameList", names);
+		 * used by the View (i.e. JSP) to display student names in HTML
+		 *
+		 * Parameters
+		 * data traveling from the url to user
+		 * doGet - get name-value pair via url
+		 *
+		 * attributes
+		 * data that remains only on the server (doesnt travel to the browser)
+		 * */
+		request.setAttribute("nameList", names);
 
 		/* This line forwards the request to the JSP */
-		this.getServletContext().getRequestDispatcher("/WEB-INF/nameList.jsp").forward(req, resp);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/nameList.jsp").forward(request, response);
 	}
 }
