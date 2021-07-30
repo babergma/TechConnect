@@ -9,7 +9,7 @@
 		<c:url var="forumPostHref" value="/forum/forumDetail">
 			<c:param name="forumId">${topic.id}</c:param>
 		</c:url>
-		<li><a href="${forumPostHref}">${topic.title}</li>
+		<li><a href="${forumPostHref}">"${topic.title}"</li>
 	</c:forEach>
 </ul>
 

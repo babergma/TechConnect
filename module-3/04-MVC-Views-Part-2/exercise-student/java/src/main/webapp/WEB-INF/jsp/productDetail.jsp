@@ -8,9 +8,9 @@
 <!-- Container for the Product -->
 <!-- The current product is available using the `product` variable -->
 <div id="product-detail">
-	<img src="<c:url value="/images/product-images/grey-sofa.jpg" />" />
+	<img src="<c:url value="/images/product-images/${product.imageName}" />" />
 	<div class="product-description">
-		<h3>Grey Sofa</h3>
+		<h3>"${product.name}"</h3>
 
 		<!-- .filled will make the star solid -->
 		<div class="rating">
