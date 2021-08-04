@@ -1,6 +1,6 @@
 # Product Review Exercise
 
-![Squirrel Cigar Parties For Dummies](etc/forDummies.png)
+![Squirrel Cigar Parties For Dummies](src/main/webapp/WEB-INF/jsp/etc/forDummies.png)
 
 You have been tasked with developing a promotional site for the best selling book, **"Squirrel Parties for Dummies"** by Craig Castelaz.
 
@@ -38,7 +38,7 @@ The page should display to the user all of the prior reviews. You can use any fo
 
 6/2/2016
 
-![star](etc/star.png)![star](etc/star.png)![star](etc/star.png)![star](etc/star.png)![star](etc/star.png)
+![star](src/main/webapp/WEB-INF/jsp/etc/star.png)![star](src/main/webapp/WEB-INF/jsp/etc/star.png)![star](src/main/webapp/WEB-INF/jsp/etc/star.png)![star](src/main/webapp/WEB-INF/jsp/etc/star.png)![star](src/main/webapp/WEB-INF/jsp/etc/star.png)
 
 Before reading this book, my squirrel parties were always lackluster (I never had enough cigars!).  Thanks to Craig's insightful advice, my squirrel parties are now at the top of everyone's social calendar!
 

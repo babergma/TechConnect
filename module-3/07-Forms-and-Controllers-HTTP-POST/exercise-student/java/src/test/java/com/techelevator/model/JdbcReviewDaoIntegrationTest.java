@@ -12,15 +12,12 @@ import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.FixMethodOrder;
-import org.junit.runners.MethodSorters;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.techelevator.DAOIntegrationTest;
 import com.techelevator.model.JdbcReviewDao;
 import com.techelevator.model.Review;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class JdbcReviewDaoIntegrationTest extends DAOIntegrationTest {
 
 	private JdbcReviewDao dao;

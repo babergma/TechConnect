@@ -1,5 +1,6 @@
 package com.techelevator.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class JdbcReviewDao implements ReviewDao {
 		Long id = getNextId();
 		String sqlInsertReview = "INSERT INTO reviews(review_id, username, rating, review_title, review_text, review_date) VALUES (?,?,?,?,?,?)";
 		jdbcTemplate.update(sqlInsertReview, id, review.getUsername(), review.getRating(), review.getTitle(),
-				review.getText(), review.getDateSubmitted());
+				review.getText(), LocalDateTime.now());
 		review.setId(id);
 	}
 

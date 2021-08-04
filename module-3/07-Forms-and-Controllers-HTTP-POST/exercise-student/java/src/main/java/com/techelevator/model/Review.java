@@ -1,6 +1,7 @@
 package com.techelevator.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Review {
 	private Long id;
@@ -9,6 +10,7 @@ public class Review {
 	private String title;
 	private String text;
 	private LocalDateTime dateSubmitted;
+	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
 	public Long getId() {
 		return id;
@@ -50,11 +52,12 @@ public class Review {
 		this.text = text;
 	}
 
-	public LocalDateTime getDateSubmitted() {
-		return dateSubmitted;
+	public String getDateSubmitted() {
+		return dateSubmitted.format(DATE_FORMATTER);
 	}
 
 	public void setDateSubmitted(LocalDateTime dateSubmitted) {
 		this.dateSubmitted = dateSubmitted;
 	}
+
 }

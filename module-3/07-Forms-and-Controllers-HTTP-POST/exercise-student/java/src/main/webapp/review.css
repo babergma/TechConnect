@@ -1,0 +1,18 @@
+.rating {
+    display: inline-block;
+}
+
+.rating span {
+    color: lightgray;
+}
+
+.filled:before {
+    content: "\2605";
+    color: #FFC000;
+    position: absolute;
+}
+
+.in-line {
+	display: inline-block;
+}
+
