@@ -8,7 +8,18 @@ public class Customer {
 	private String firstName;
 	private String lastName;
 	private String email;
-	private boolean active;
+	private boolean activebool;
+
+	public Customer() {
+	}
+
+	public Customer(String firstName, String lastName, String email, boolean active) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.activebool = active;
+
+	}
 
 	/**
 	 * @return the firstName
@@ -56,13 +67,13 @@ public class Customer {
 	 * @return the active
 	 */
 	public boolean isActive() {
-		return active;
+		return activebool;
 	}
 
 	/**
 	 * @param active the active to set
 	 */
 	public void setActive(boolean active) {
-		this.active = active;
+		this.activebool = activebool;
 	}
 }
