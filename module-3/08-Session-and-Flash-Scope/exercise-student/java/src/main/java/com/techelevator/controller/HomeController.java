@@ -14,7 +14,7 @@ public class HomeController {
 		// Because we want to return a 301 status code, we need to use RedirectView
 		// rather than redirect:
 		// Return a redirect relative to the context of the application
-		RedirectView redirect = new RedirectView("/FavoriteThings/Page1", true);
+		RedirectView redirect = new RedirectView("/FavoriteThings/page1", true);
 		redirect.setStatusCode(HttpStatus.MOVED_PERMANENTLY);
 		return new ModelAndView(redirect);
 	}

@@ -6,10 +6,12 @@
 	<c:param name="title" value="Favorite Color" />
 </c:import>
 
-<form method="POST">
-	<label>What is your favorite color?</label>
-	<input type="text" name="favoriteColor">
-	<button type="submit">Next >>></button>
+<h2>What is your favorite color?</h2>
+
+<c:url var="colorURL" value="/FavoriteThings/Page1" />
+<form action="${colorURL}" method="POST">
+	<input type="text" name="input" />
+	<input type="submit" value="Next >>>" />
 </form>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
